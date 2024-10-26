@@ -1,0 +1,64 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath,amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titling}
+
+\newcommand{\classX}[1]{\ensuremath{\text{\textsf{\textbf{#1}}}}} 
+\newcommand{\classL}{\classX{L}}
+
+% \theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 212, Fall 2024}{WC 07: Turing Machines}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+% \printanswers %Uncomment this line
+
+\title{Weekly Challenge 07: Turing Machines}
+\author{ungraded} % <=== replace with your student ID, e.g. xy012345
+\date{CS 212 Nature of Computation\\Habib University\\Fall 2024}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+  
+\titledquestion{}
+    \begin{definition}
+        We say a problem $L \subseteq \Sigma^*$ is decidable if there exits a Turing Machine $M$ that for every $w \in \Sigma^*$, $M$ \emph{accepts} $w$ iff $w \in L$ and $M$ \emph{rejects} $w$ iff $w \not\in L$.
+    \end{definition}
+    \begin{definition}
+        Let $M$ be a turing machine with two tapes, a read only input tape and a read-write work tape. Let $f: \mathbb{N} \to \mathbb{R}^+$ be a function. We say $M$ runs in $f(n)$ space if on input of size $n$, $M$ uses at most $O(f(n))$ steps on the work tape.
+    \end{definition}
+    \begin{definition}
+        $\classL = \{L \subseteq \Sigma^* |\; L$ is decidable in $\log(n)$ space$\}$. In other words $\classL$ contains problems that are decidable by a Turing Machine that runs in $\log(n)$ space.
+    \end{definition}
+    Compilers often use regular languages in syntactical analysis. Our digital computers aims to simulate a Turing Machine. Now the natural question is if the problem of simulating a DFA is computable or not.
+    With this consider the language \textsc{regular} = $\{\langle M, w\rangle |\;M$ is a DFA, $w \in \{0,1\}^*$ and $M$ accepts $w \}$. 
+    Show that \textsc{regular} is decidable.
+    Now often times the space and time our algorithms takes is of the great importance. We like to study how hard a problem is which in turns mean studying how much time/space a problem takes. We like our compilers to be well optimized so we don't take as much space and time compiling our programs. Regular languages a ideal for compilers as we don't need too much space in computing them. Show that $\textsc{regular} \in \classL$. 
+    
+    \textbf{Hint:} In order to show that a problem is decidable we construct a Turing machine for it. In order to show that the problem is in $\classL$ show that the Turing machine you constructed uses at most $\log(n)$ cells on the work tape on any input of size $n$.
+  
+  \begin{solution}
+    % Enter your solution here.
+  \end{solution}
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
