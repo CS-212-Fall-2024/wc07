@@ -5,9 +5,11 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{titling}
-\usepackage{arabtex}
-\usepackage{utf8}
-\setcode{utf8}
+\usepackage{polyglossia}
+
+\setmainlanguage{english}
+\setotherlanguage{urdu}
+\newfontfamily\urdufont[Scale=1.25]{jameel.ttf}
 
 \newcommand{\classX}[1]{\ensuremath{\text{\textsf{\textbf{#1}}}}} 
 \newcommand{\classL}{\classX{L}}
@@ -38,7 +40,7 @@
 
 \begin{questions}
   
-\titledquestion{\<ٹیپ پر جگہ ہو نہ ہو دل میں جگہ ہونی چاہیے>}
+\titledquestion{\texturdu{ٹیپ پر جگہ ہو نہ ہو دل میں جگہ ہونی چاہیے}}
     \begin{definition}
         We say a problem $L \subseteq \Sigma^*$ is decidable if there exits a Turing Machine $M$ that for every $w \in \Sigma^*$, $M$ \emph{accepts} $w$ iff $w \in L$ and $M$ \emph{rejects} $w$ iff $w \not\in L$.
     \end{definition}
