@@ -5,6 +5,9 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{titling}
+\usepackage{arabtex}
+\usepackage{utf8}
+\setcode{utf8}
 
 \newcommand{\classX}[1]{\ensuremath{\text{\textsf{\textbf{#1}}}}} 
 \newcommand{\classL}{\classX{L}}
@@ -24,7 +27,7 @@
 % \printanswers %Uncomment this line
 
 \title{Weekly Challenge 07: Turing Machines}
-\author{ungraded} % <=== replace with your student ID, e.g. xy012345
+\author{Blingblong} % <=== replace with your student ID, e.g. xy012345
 \date{CS 212 Nature of Computation\\Habib University\\Fall 2024}
 
 \qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
@@ -35,7 +38,7 @@
 
 \begin{questions}
   
-\titledquestion{}
+\titledquestion{\<ٹیپ پر جگہ ہو نہ ہو دل میں جگہ ہونی چاہیے>}
     \begin{definition}
         We say a problem $L \subseteq \Sigma^*$ is decidable if there exits a Turing Machine $M$ that for every $w \in \Sigma^*$, $M$ \emph{accepts} $w$ iff $w \in L$ and $M$ \emph{rejects} $w$ iff $w \not\in L$.
     \end{definition}
@@ -51,7 +54,6 @@
     Now often times the space and time our algorithms takes is of the great importance. We like to study how hard a problem is which in turns mean studying how much time/space a problem takes. We like our compilers to be well optimized so we don't take as much space and time compiling our programs. Regular languages a ideal for compilers as we don't need too much space in computing them. Show that $\textsc{regular} \in \classL$. 
     
     \textbf{Hint:} In order to show that a problem is decidable we construct a Turing machine for it. In order to show that the problem is in $\classL$ show that the Turing machine you constructed uses at most $\log(n)$ cells on the work tape on any input of size $n$.
-  
   \begin{solution}
     % Enter your solution here.
   \end{solution}
